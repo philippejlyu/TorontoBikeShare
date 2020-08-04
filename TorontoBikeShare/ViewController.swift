@@ -13,6 +13,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     // MARK: - Properties
     var bikeLocations: [String: BikeStation] = [:]
+    var favoriteLocations: [String: BikeStation] = [:]
     
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -31,10 +32,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 for key in keys {
                     let loc = locations[key]!
                     // We want to add an annotation for each one
-                    
-                    let annotation = MKPointAnnotation()
+                    let annotation = BikeAnnotation(coordinate: loc.coordinate)
                     annotation.title = loc.name
-                    annotation.coordinate = loc.coordinate
+                    annotation.station = loc
+                    // TODO: Check to see if this place is favorited
+                    
                     self.mapView.addAnnotation(annotation)
                     
                     print("\(loc.name), \(loc.availableBikes), \(loc.availableEbike), \(loc.availableDock)")
@@ -70,12 +72,37 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             // Provide an image view to use as the accessory view's detail view.
             markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: UIImage(systemName: "car.fill"))
-            let favoriteButton = UIButton(type: .detailDisclosure)
+            let favoriteButton = FavoriteButton(type: .detailDisclosure)
+            favoriteButton.annotation = annotation
             favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            favoriteButton.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
             markerAnnotationView.rightCalloutAccessoryView = favoriteButton
         }
         
         return annotationView
+    }
+    
+    /// Handles what happens when the annotation button is clicked
+    
+    @objc func buttonClicked(sender: FavoriteButton) {
+        print("button clicked")
+        let annotation = sender.annotation as! BikeAnnotation
+        if annotation.isFavorite {
+            sender.setImage(UIImage(systemName: "star"), for: .normal)
+            annotation.isFavorite = false
+        } else {
+            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            annotation.isFavorite = true
+            let station = annotation.station!
+            self.favoriteLocations[station.name] = station
+            
+            // TODO: Save to json file
+        }
+    }
+    
+    /// Saves self.favoriteLocations to json
+    func saveToJson() {
+        
     }
     
     private func registerMapAnnotationViews() {

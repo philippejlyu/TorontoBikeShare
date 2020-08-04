@@ -11,6 +11,9 @@
 		AD4BC4D024D8E3AB00509A0F /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */; };
 		AD4BC4D124D8E45800509A0F /* BikeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */; };
 		AD4BC4D324D8ED8B00509A0F /* FavoritesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */; };
+		AD4BC4D524D914F600509A0F /* BikeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */; };
+		AD4BC4D724D91B5B00509A0F /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */; };
+		AD4BC4D924D91F9200509A0F /* Favorites.json in Resources */ = {isa = PBXBuildFile; fileRef = AD4BC4D824D91F9200509A0F /* Favorites.json */; };
 		AD5E787824D8BB4000DF9EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */; };
 		AD5E787A24D8BB4000DF9EBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */; };
 		AD5E787C24D8BB4000DF9EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787B24D8BB4000DF9EBF /* ViewController.swift */; };
@@ -80,6 +83,9 @@
 		8C307FC5EAA9B7127309F62C /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A866D93359FE24BC7EB4DF11 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare WatchKit App/Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInterfaceController.swift; sourceTree = "<group>"; };
+		AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeAnnotation.swift; sourceTree = "<group>"; };
+		AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		AD4BC4D824D91F9200509A0F /* Favorites.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Favorites.json; sourceTree = "<group>"; };
 		AD5E787424D8BB4000DF9EBF /* TorontoBikeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoBikeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 			children = (
 				AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */,
 				AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */,
+				AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */,
+				AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */,
 				AD5E787B24D8BB4000DF9EBF /* ViewController.swift */,
 				AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */,
 				AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */,
@@ -192,6 +200,7 @@
 				AD5E788024D8BB4100DF9EBF /* Assets.xcassets */,
 				AD5E788224D8BB4100DF9EBF /* LaunchScreen.storyboard */,
 				AD5E788524D8BB4100DF9EBF /* Info.plist */,
+				AD4BC4D824D91F9200509A0F /* Favorites.json */,
 			);
 			path = TorontoBikeShare;
 			sourceTree = "<group>";
@@ -329,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5E788424D8BB4100DF9EBF /* LaunchScreen.storyboard in Resources */,
+				AD4BC4D924D91F9200509A0F /* Favorites.json in Resources */,
 				AD5E788124D8BB4100DF9EBF /* Assets.xcassets in Resources */,
 				AD5E787F24D8BB4000DF9EBF /* Main.storyboard in Resources */,
 			);
@@ -462,8 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5E78B624D8BEF100DF9EBF /* DataFetcher.swift in Sources */,
+				AD4BC4D524D914F600509A0F /* BikeAnnotation.swift in Sources */,
 				AD5E787C24D8BB4000DF9EBF /* ViewController.swift in Sources */,
 				AD5E78B424D8BDFF00DF9EBF /* BikeStation.swift in Sources */,
+				AD4BC4D724D91B5B00509A0F /* FavoriteButton.swift in Sources */,
 				AD5E787824D8BB4000DF9EBF /* AppDelegate.swift in Sources */,
 				AD5E787A24D8BB4000DF9EBF /* SceneDelegate.swift in Sources */,
 			);
