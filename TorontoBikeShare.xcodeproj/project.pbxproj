@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A68DB3656A614240EF7E1EE6 /* Pods_TorontoBikeShare_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2D51BC2509F48BFB388CAB /* Pods_TorontoBikeShare_WatchKit_App.framework */; };
+		AD4BC4D024D8E3AB00509A0F /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */; };
+		AD4BC4D124D8E45800509A0F /* BikeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */; };
+		AD4BC4D324D8ED8B00509A0F /* FavoritesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */; };
 		AD5E787824D8BB4000DF9EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */; };
 		AD5E787A24D8BB4000DF9EBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */; };
 		AD5E787C24D8BB4000DF9EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787B24D8BB4000DF9EBF /* ViewController.swift */; };
@@ -76,6 +79,7 @@
 		63B7D64D41C324B4295CE63D /* Pods-TorontoBikeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare.release.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare/Pods-TorontoBikeShare.release.xcconfig"; sourceTree = "<group>"; };
 		8C307FC5EAA9B7127309F62C /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A866D93359FE24BC7EB4DF11 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare WatchKit App/Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInterfaceController.swift; sourceTree = "<group>"; };
 		AD5E787424D8BB4000DF9EBF /* TorontoBikeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoBikeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,7 +155,6 @@
 				8C307FC5EAA9B7127309F62C /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */,
 				BB3ECD762B10E9F8D515CE53 /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +215,7 @@
 				AD5E78A224D8BB4200DF9EBF /* Assets.xcassets */,
 				AD5E78A424D8BB4200DF9EBF /* Info.plist */,
 				AD5E78A524D8BB4200DF9EBF /* PushNotificationPayload.apns */,
+				AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */,
 			);
 			path = "TorontoBikeShare WatchKit Extension";
 			sourceTree = "<group>";
@@ -267,6 +271,7 @@
 				AD5E789324D8BB4200DF9EBF /* Sources */,
 				AD5E789424D8BB4200DF9EBF /* Frameworks */,
 				AD5E789524D8BB4200DF9EBF /* Resources */,
+				B6C17D4F3AFA5A019696E56B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,6 +437,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6C17D4F3AFA5A019696E56B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -453,7 +475,10 @@
 			files = (
 				AD5E78A124D8BB4200DF9EBF /* NotificationController.swift in Sources */,
 				AD5E789F24D8BB4200DF9EBF /* ExtensionDelegate.swift in Sources */,
+				AD4BC4D124D8E45800509A0F /* BikeStation.swift in Sources */,
+				AD4BC4D324D8ED8B00509A0F /* FavoritesInterfaceController.swift in Sources */,
 				AD5E789D24D8BB4200DF9EBF /* InterfaceController.swift in Sources */,
+				AD4BC4D024D8E3AB00509A0F /* DataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

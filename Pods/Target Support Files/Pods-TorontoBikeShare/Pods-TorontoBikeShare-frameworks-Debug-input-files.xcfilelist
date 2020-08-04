@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-TorontoBikeShare/Pods-TorontoBikeShare-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework

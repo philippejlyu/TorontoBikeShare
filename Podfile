@@ -20,7 +20,7 @@ end
 target 'TorontoBikeShare WatchKit Extension' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for TorontoBikeShare WatchKit Extension
-
+  pod 'Alamofire', '~> 5.2'
 end

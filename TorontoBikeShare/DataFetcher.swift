@@ -13,9 +13,9 @@ import CoreLocation
 
 class DataFetcher {
     
-    let apiURL = "https://tor.publicbikesystem.net/ube/gbfs/v1/en/"
+    let apiURL = "https://tor.publicbikesystem.net/ube/gbfs/v1/en"
     
-    
+    /// Get the locations from the City of Toronto API
     func getLocations(completionHandler: @escaping (_ locations: [String: BikeStation]?, _ error: String?) -> Void) {
         let url = URL(string: "\(self.apiURL)/station_information")!
         
@@ -64,6 +64,7 @@ class DataFetcher {
     /**
             Returns the station id, then a tuple of (Mechanical bike, E-bike, and empty docks)
      */
+    /// Get the bike availability data from each station. Returns a tuple in order of mech, e-bike, and empty docks
     func populateBikes(completion: @escaping (_ stations: [String: (Int, Int, Int)]?, _ error: String?) -> Void) {
         let url = URL(string: "\(self.apiURL)/station_status")!
         
