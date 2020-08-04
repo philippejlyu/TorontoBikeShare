@@ -14,7 +14,7 @@ class FavoritesInterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        self.readFromPlist()
         // Configure interface objects here.
     }
 
@@ -26,6 +26,19 @@ class FavoritesInterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    // MARK: - Reading
+    func readFromPlist() {
+        print("going to read from plist")
+//        Bundle.main.url(forResource: "Favorites", withExtension: "plist")
+        if let path = Bundle.main.path(forResource: "Favorites", ofType: "plist"), let favorites = NSArray(contentsOfFile: path) as? [NSDictionary] {
+            
+            for index in favorites {
+                print(index["station name"])
+                print(index)
+            }
+        }
     }
 
 }

@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="405" y="-343"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Favorites Interface Controller-->
         <scene sceneID="8UB-an-gf6">
             <objects>
-                <controller id="AgB-5I-t4C">
+                <controller id="AgB-5I-t4C" customClass="FavoritesInterfaceController" customModule="TorontoBikeShare_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="3jh-7U-aVb">
                             <items>
