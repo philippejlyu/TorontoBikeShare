@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgB-5I-t4C">
-    <device id="watch44"/>
+    <device id="watch40"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
@@ -34,6 +34,7 @@
                     <connections>
                         <outlet property="availableBikesLabel" destination="Dlq-Q8-rdH" id="ae2-UK-i0j"/>
                         <outlet property="availableDocksLabel" destination="aLG-Qe-Fjb" id="IBz-V5-OyS"/>
+                        <outlet property="map" destination="bZy-z7-faY" id="q31-U1-bi4"/>
                         <outlet property="stationNameLabel" destination="ltT-f6-3mz" id="lhq-Oe-PoA"/>
                     </connections>
                 </controller>
@@ -47,22 +48,25 @@
                     <items>
                         <table alignment="left" id="3jh-7U-aVb">
                             <items>
-                                <tableRow id="Ppv-tI-WR7">
-                                    <group key="rootItem" width="1" height="59" alignment="left" id="KV6-E2-18u">
+                                <tableRow identifier="favoriteRow" id="Ppv-tI-WR7" customClass="FavoritesRowController" customModule="TorontoBikeShare_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="80" alignment="left" id="KV6-E2-18u">
                                         <items>
-                                            <label width="136" height="44" alignment="left" verticalAlignment="center" text="Wellesley St W / Queen's Park Cres" numberOfLines="2" id="An3-wA-08J"/>
+                                            <label width="136" height="44" alignment="left" verticalAlignment="center" text="Wellesley St W / Queen's Park Cres" numberOfLines="3" id="An3-wA-08J"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="AgC-eL-Hgc" kind="push" id="B5i-kX-LED"/>
-                                        </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="stationNameLabel" destination="An3-wA-08J" id="Oa6-GU-jrn"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="favoritesTable" destination="3jh-7U-aVb" id="qIY-Bu-VFb"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="144.39506172839506" y="-343.02030456852788"/>
+            <point key="canvasLocation" x="143.55555555555554" y="-343.88324873096445"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

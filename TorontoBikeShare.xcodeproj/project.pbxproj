@@ -15,6 +15,7 @@
 		AD4BC4D724D91B5B00509A0F /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */; };
 		AD4BC4DB24D9225900509A0F /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD4BC4DA24D9225900509A0F /* Favorites.plist */; };
 		AD4BC4DC24D922FF00509A0F /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD4BC4DA24D9225900509A0F /* Favorites.plist */; };
+		AD4BC4DE24D92B1300509A0F /* FavoritesRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BC4DD24D92B1300509A0F /* FavoritesRowController.swift */; };
 		AD5E787824D8BB4000DF9EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */; };
 		AD5E787A24D8BB4000DF9EBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */; };
 		AD5E787C24D8BB4000DF9EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E787B24D8BB4000DF9EBF /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeAnnotation.swift; sourceTree = "<group>"; };
 		AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		AD4BC4DA24D9225900509A0F /* Favorites.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Favorites.plist; sourceTree = "<group>"; };
+		AD4BC4DD24D92B1300509A0F /* FavoritesRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRowController.swift; sourceTree = "<group>"; };
 		AD5E787424D8BB4000DF9EBF /* TorontoBikeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TorontoBikeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5E789C24D8BB4200DF9EBF /* InterfaceController.swift */,
+				AD4BC4DD24D92B1300509A0F /* FavoritesRowController.swift */,
 				AD5E789E24D8BB4200DF9EBF /* ExtensionDelegate.swift */,
 				AD5E78A024D8BB4200DF9EBF /* NotificationController.swift */,
 				AD5E78A224D8BB4200DF9EBF /* Assets.xcassets */,
@@ -493,6 +496,7 @@
 				AD4BC4D324D8ED8B00509A0F /* FavoritesInterfaceController.swift in Sources */,
 				AD5E789D24D8BB4200DF9EBF /* InterfaceController.swift in Sources */,
 				AD4BC4D024D8E3AB00509A0F /* DataFetcher.swift in Sources */,
+				AD4BC4DE24D92B1300509A0F /* FavoritesRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

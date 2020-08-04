@@ -29,6 +29,14 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        if let station = context as? NSDictionary {
+            self.stationID = station["station id"] as! String
+            self.stationName = station["station name"] as! String
+            let lat = station["lat"] as! Double
+            let lon = station["lon"] as! Double
+            self.coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            print("Got the info populated")
+        }
         
         let fetcher = DataFetcher()
         fetcher.populateBikes { (bikes, error) in

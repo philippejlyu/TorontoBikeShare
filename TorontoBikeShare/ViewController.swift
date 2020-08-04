@@ -96,14 +96,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let station = annotation.station!
             self.favoriteLocations[station.name] = station
             
-            // TODO: Save to json file
+            // TODO: Save to file
         }
     }
     
-    /// Saves self.favoriteLocations to json
-    func saveToJson() {
-        
-    }
+    
     
     private func registerMapAnnotationViews() {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "AnnotationView")

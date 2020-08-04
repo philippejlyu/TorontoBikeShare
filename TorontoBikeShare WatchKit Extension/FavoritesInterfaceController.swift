@@ -12,11 +12,22 @@ import Foundation
 
 class FavoritesInterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var favoritesTable: WKInterfaceTable!
+    
+    var favorites: [NSDictionary] = []
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        self.readFromPlist()
         // Configure interface objects here.
+        
+        self.readFromPlist()
+        self.favorites = self.readFromPlist()!
+        self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
+        
+        setupTable()
+        
     }
+    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -28,17 +39,28 @@ class FavoritesInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    // MARK: - Table related
+    
+    func setupTable() {
+        for index in 0..<self.favoritesTable.numberOfRows {
+            guard let controller = favoritesTable.rowController(at: index) as? FavoritesRowController else { continue }
+            controller.initializeInformation(information: self.favorites[index])
+        }
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        let station = self.favorites[rowIndex]
+        presentController(withName: "StationInferface", context: station)
+    }
+    
     // MARK: - Reading
-    func readFromPlist() {
-        print("going to read from plist")
-//        Bundle.main.url(forResource: "Favorites", withExtension: "plist")
+    func readFromPlist() -> [NSDictionary]? {
+
         if let path = Bundle.main.path(forResource: "Favorites", ofType: "plist"), let favorites = NSArray(contentsOfFile: path) as? [NSDictionary] {
             
-            for index in favorites {
-                print(index["station name"])
-                print(index)
-            }
+            return favorites
         }
+        return nil
     }
 
 }
