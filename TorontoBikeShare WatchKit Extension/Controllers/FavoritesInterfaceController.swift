@@ -20,7 +20,6 @@ class FavoritesInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         // Configure interface objects here.
         
-        self.readFromPlist()
         self.favorites = self.readFromPlist()!
         self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
         
@@ -50,7 +49,8 @@ class FavoritesInterfaceController: WKInterfaceController {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let station = self.favorites[rowIndex]
-        presentController(withName: "StationInferface", context: station)
+        pushController(withName: "StationInferface", context: station)
+
     }
     
     // MARK: - Reading

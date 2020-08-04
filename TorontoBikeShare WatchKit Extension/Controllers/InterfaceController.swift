@@ -52,12 +52,19 @@ class InterfaceController: WKInterfaceController {
                         self.availableBikesLabel.setText("\(totalBikes)")
                         self.availableDocksLabel.setText("\(docks)")
                         self.map.addAnnotation(self.coordinates, with: .red)
+                        self.centerMapOnStation()
                     }
                 }
             }
         }
         
         // Configure interface objects here.
+    }
+    
+    // MARK: - Map related functions
+    private func centerMapOnStation() {
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        self.map.setRegion(MKCoordinateRegion(center: self.coordinates, span: span))
     }
     
     override func willActivate() {

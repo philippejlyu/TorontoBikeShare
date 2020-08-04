@@ -167,6 +167,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AD4BC4DF24D938C100509A0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */,
+				AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */,
+				AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD4BC4E024D938D900509A0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E789C24D8BB4200DF9EBF /* InterfaceController.swift */,
+				AD4BC4DD24D92B1300509A0F /* FavoritesRowController.swift */,
+				AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		AD5E786B24D8BB4000DF9EBF = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +214,9 @@
 			children = (
 				AD5E787724D8BB4000DF9EBF /* AppDelegate.swift */,
 				AD5E787924D8BB4000DF9EBF /* SceneDelegate.swift */,
-				AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */,
+				AD4BC4DF24D938C100509A0F /* Model */,
 				AD4BC4D624D91B5B00509A0F /* FavoriteButton.swift */,
 				AD5E787B24D8BB4000DF9EBF /* ViewController.swift */,
-				AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */,
-				AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */,
 				AD5E787D24D8BB4000DF9EBF /* Main.storyboard */,
 				AD4BC4DA24D9225900509A0F /* Favorites.plist */,
 				AD5E788024D8BB4100DF9EBF /* Assets.xcassets */,
@@ -221,14 +239,12 @@
 		AD5E789B24D8BB4200DF9EBF /* TorontoBikeShare WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AD5E789C24D8BB4200DF9EBF /* InterfaceController.swift */,
-				AD4BC4DD24D92B1300509A0F /* FavoritesRowController.swift */,
+				AD4BC4E024D938D900509A0F /* Controllers */,
 				AD5E789E24D8BB4200DF9EBF /* ExtensionDelegate.swift */,
 				AD5E78A024D8BB4200DF9EBF /* NotificationController.swift */,
 				AD5E78A224D8BB4200DF9EBF /* Assets.xcassets */,
 				AD5E78A424D8BB4200DF9EBF /* Info.plist */,
 				AD5E78A524D8BB4200DF9EBF /* PushNotificationPayload.apns */,
-				AD4BC4D224D8ED8B00509A0F /* FavoritesInterfaceController.swift */,
 			);
 			path = "TorontoBikeShare WatchKit Extension";
 			sourceTree = "<group>";
