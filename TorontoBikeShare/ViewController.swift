@@ -20,35 +20,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     
     // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.favoriteLocations = self.retrieveFavorites()
         print(self.favoriteLocations)
-        let fetcher = DataFetcher()
         self.registerMapAnnotationViews()
         print(self.documentsDirectory())
-        fetcher.getLocations { (locations, error) in
-            if let locations = locations {
-                self.bikeLocations = locations
-                let keys = locations.keys
-                for key in keys {
-                    let loc = locations[key]!
-                    // We want to add an annotation for each one
-                    let coord = CLLocationCoordinate2D(latitude: loc.lat, longitude: loc.lon)
-                    let annotation = BikeAnnotation(coordinate: coord)
-                    annotation.title = loc.name
-                    annotation.station = loc
-                    // TODO: Check to see if this place is favorited
-                    
-                    self.mapView.addAnnotation(annotation)
-                    
-                    print("\(loc.name), \(loc.availableBikes), \(loc.availableEbike), \(loc.availableDock)")
-                }
-            } else {
-                print(error)
-            }
-        }
+        
+        getBikeLocations()
         
     }
     
@@ -78,7 +59,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             markerAnnotationView.detailCalloutAccessoryView = UIImageView(image: UIImage(systemName: "car.fill"))
             let favoriteButton = FavoriteButton(type: .detailDisclosure)
             favoriteButton.annotation = annotation
-            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            let bikeAnnotation = annotation as! BikeAnnotation
+            if bikeAnnotation.isFavorite {
+                favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            } else {
+                favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+            }
             favoriteButton.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
             markerAnnotationView.rightCalloutAccessoryView = favoriteButton
         }
@@ -163,17 +149,35 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return nil
     }
     
-    /*
-     
-     if let station = context as? NSDictionary {
-         self.stationID = station["station id"] as! String
-         self.stationName = station["station name"] as! String
-         let lat = station["lat"] as! Double
-         let lon = station["lon"] as! Double
-         self.coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-         print("Got the info populated")
-     }
-     */
+    /// Gets the bike locations from the city's server
+    fileprivate func getBikeLocations() {
+        let fetcher = DataFetcher()
+        fetcher.getLocations { (locations, error) in
+            if let locations = locations {
+                self.bikeLocations = locations
+                let keys = locations.keys
+                for key in keys {
+                    let loc = locations[key]!
+                    // We want to add an annotation for each one
+                    let coord = CLLocationCoordinate2D(latitude: loc.lat, longitude: loc.lon)
+                    let annotation = BikeAnnotation(coordinate: coord)
+                    annotation.title = loc.name
+                    annotation.station = loc
+                    // TODO: Check to see if this place is favorited
+                    if self.favoriteLocations[loc.stationID] != nil {
+                        // It is favorited, so we need to do something about it
+                        annotation.isFavorite = true
+                        // We change the fill of the button in map view for annotation
+                    }
+                    
+                    self.mapView.addAnnotation(annotation)
+                    
+                }
+            } else {
+                print(error)
+            }
+        }
+    }
     
 }
 
