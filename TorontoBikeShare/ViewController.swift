@@ -28,7 +28,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         print(self.favoriteLocations)
         self.registerMapAnnotationViews()
         print(self.documentsDirectory())
-        
+        self.centerMapOnStation()
         getBikeLocations()
         
     }
@@ -112,6 +112,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             stations.append(self.favoriteLocations[key]!)
         }
         return stations
+    }
+    
+    private func centerMapOnStation() {
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let center = CLLocationCoordinate2D(latitude: 43.661543, longitude: -79.393332)
+        self.mapView.setRegion(MKCoordinateRegion(center: center, span: span), animated: false)
     }
     
     
