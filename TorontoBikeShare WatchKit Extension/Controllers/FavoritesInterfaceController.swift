@@ -19,8 +19,8 @@ class FavoritesInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-        
-        self.favorites = self.readFromPlist()!
+//        print(self.documentsDirectory())
+        //self.favorites = self.readFromPlist()!
         self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
         
         setupTable()
@@ -62,5 +62,15 @@ class FavoritesInterfaceController: WKInterfaceController {
         }
         return nil
     }
+    
+//    func documentsDirectory() -> URL {
+//        FileManager.default.urls(for: .documentDirectory, in: <#T##FileManager.SearchPathDomainMask#>)
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        return paths[0]
+//    }
+//
+//    func dataFilePath() -> URL {
+//        return documentsDirectory().appendingPathComponent("Favourites.plist")
+//    }
 
 }

@@ -9,11 +9,12 @@
 import Foundation
 import CoreLocation
 
-struct BikeStation {
+struct BikeStation: Codable {
     
     var name: String
     var stationID: String
-    var coordinate: CLLocationCoordinate2D
+    var lat: Double
+    var lon: Double
     var availableBikes: Int
     var availableEbike: Int
     var availableDock: Int
