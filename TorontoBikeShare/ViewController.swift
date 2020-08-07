@@ -85,7 +85,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.isFavorite = false
             let id = annotation.station!.stationID
             self.favoriteLocations.removeValue(forKey: id)
-            persistence.saveToPlist(locations: self.favoriteLocations)
+            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now send the change to the apple watch
             persistence.sendDataToWatch(bikeStation: annotation.station!, add: false)
@@ -95,7 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.isFavorite = true
             let station = annotation.station!
             self.favoriteLocations[station.stationID] = station
-            persistence.saveToPlist(locations: self.favoriteLocations)
+            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now add this location to the apple watch
             persistence.sendDataToWatch(bikeStation: annotation.station!, add: true)

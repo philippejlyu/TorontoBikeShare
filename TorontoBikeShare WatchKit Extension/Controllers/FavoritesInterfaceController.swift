@@ -25,7 +25,6 @@ class FavoritesInterfaceController: WKInterfaceController {
         let persistence = FavoritePersistence()
         let favDict = persistence.retrieveFavorites()
         self.favorites = persistence.processFavoriteLocations(favoriteLocations: favDict)
-        print(favorites)
         let debugStation = BikeStation(name: "Spadina Ave / Willcocks St", stationID: "7170", lat: 43.661672, lon: -79.401387, availableBikes: 1, availableEbike: 0, availableDock: 14)
         self.favorites.append(debugStation)
         setupTable()

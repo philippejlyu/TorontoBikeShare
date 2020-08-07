@@ -38,7 +38,7 @@ class FavoritePersistence {
     }
     
     /// Saves `data` to the favorite plist file on the iPhone
-    fileprivate func encodeToPlist(data: [BikeStation]) {
+    fileprivate func saveArrayToPlist(data: [BikeStation]) {
         // This saves to a plist file in the documents directory of the iphone
         let encoder = PropertyListEncoder()
         do {
@@ -50,9 +50,9 @@ class FavoritePersistence {
     }
     
     /// Save the dictionary `locations` to a file in the app documents
-    func saveToPlist(locations: [String: BikeStation]) {
+    func saveAllToPlist(locations: [String: BikeStation]) {
         let processedLocations = self.processFavoriteLocations(favoriteLocations: locations)
-        self.encodeToPlist(data: processedLocations)
+        self.saveArrayToPlist(data: processedLocations)
     }
     
     /// Turns a dictionary of favorite bike stations to just an array of bike stations
