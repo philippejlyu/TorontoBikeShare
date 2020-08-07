@@ -14,17 +14,24 @@ class FavoritesInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var favoritesTable: WKInterfaceTable!
     
-    var favorites: [NSDictionary] = []
+    var favorites: [BikeStation] = []
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
-//        print(self.documentsDirectory())
-        //self.favorites = self.readFromPlist()!
-        self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
+        self.registerForDataNotifications()
+        
+        let persistence = FavoritePersistence()
+        let favDict = persistence.retrieveFavorites()
+        self.favorites = persistence.processFavoriteLocations(favoriteLocations: favDict)
+        print(favorites)
         
         setupTable()
         
+    }
+    
+    deinit {
+        self.deregisterForDataNotifications()
     }
     
 
@@ -41,6 +48,7 @@ class FavoritesInterfaceController: WKInterfaceController {
     // MARK: - Table related
     
     func setupTable() {
+        self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
         for index in 0..<self.favoritesTable.numberOfRows {
             guard let controller = favoritesTable.rowController(at: index) as? FavoritesRowController else { continue }
             controller.initializeInformation(information: self.favorites[index])
@@ -53,24 +61,35 @@ class FavoritesInterfaceController: WKInterfaceController {
 
     }
     
-    // MARK: - Reading
-    func readFromPlist() -> [NSDictionary]? {
-
-        if let path = Bundle.main.path(forResource: "Favorites", ofType: "plist"), let favorites = NSArray(contentsOfFile: path) as? [NSDictionary] {
-            
-            return favorites
-        }
-        return nil
+    // MARK: - Data related
+    func registerForDataNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(addFavorite(notification:)), name: Notification.Name("stationAdded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(removeFavorite(notification:)), name: Notification.Name("stationRemoved"), object: nil)
     }
     
-//    func documentsDirectory() -> URL {
-//        FileManager.default.urls(for: .documentDirectory, in: <#T##FileManager.SearchPathDomainMask#>)
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
-//
-//    func dataFilePath() -> URL {
-//        return documentsDirectory().appendingPathComponent("Favourites.plist")
-//    }
+    func deregisterForDataNotifications() {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("stationAdded"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("stationRemoved"), object: nil)
+        
+    }
+    
+    @objc func addFavorite(notification: Notification) {
+        print("Did receive add notification")
+        guard let station = notification.object as? BikeStation else { return }
+        self.favorites.append(station)
+        self.setupTable()
+    }
+    
+    @objc func removeFavorite(notification: Notification) {
+        print("Did receive remove notification")
+        guard let station = notification.object as? BikeStation else { return }
+        for i in 0..<self.favorites.count {
+            if self.favorites[i].stationID == station.stationID {
+                self.favorites.remove(at: i)
+                self.setupTable()
+                break
+            }
+        }
+    }
 
 }

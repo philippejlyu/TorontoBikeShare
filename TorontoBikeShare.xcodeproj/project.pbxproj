@@ -30,6 +30,10 @@
 		AD5E78A324D8BB4200DF9EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5E78A224D8BB4200DF9EBF /* Assets.xcassets */; };
 		AD5E78B424D8BDFF00DF9EBF /* BikeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */; };
 		AD5E78B624D8BEF100DF9EBF /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */; };
+		AD7A04CA24DA3A0A005C0C2D /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A04C924DA3A0A005C0C2D /* SessionDelegate.swift */; };
+		AD7A04CB24DA5622005C0C2D /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7A04C924DA3A0A005C0C2D /* SessionDelegate.swift */; };
+		ADB89CA824DCC83A005D0EFC /* FavoritePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB89CA724DCC83A005D0EFC /* FavoritePersistence.swift */; };
+		ADB89CA924DCC8A7005D0EFC /* FavoritePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB89CA724DCC83A005D0EFC /* FavoritePersistence.swift */; };
 		F0FCB8FAEDD01C998967E156 /* Pods_TorontoBikeShare_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE569F8D400F92D577C23267 /* Pods_TorontoBikeShare_WatchKit_Extension.framework */; };
 		FB42E0A40DEC9DC6D3241432 /* Pods_TorontoBikeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62EA8BFA454D668DD45BF771 /* Pods_TorontoBikeShare.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +112,8 @@
 		AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStation.swift; sourceTree = "<group>"; };
 		AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		AD7A04C824DA2EB1005C0C2D /* TorontoBikeShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TorontoBikeShare.entitlements; sourceTree = "<group>"; };
+		AD7A04C924DA3A0A005C0C2D /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		ADB89CA724DCC83A005D0EFC /* FavoritePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePersistence.swift; sourceTree = "<group>"; };
 		AE569F8D400F92D577C23267 /* Pods_TorontoBikeShare_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TorontoBikeShare_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB3ECD762B10E9F8D515CE53 /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TorontoBikeShare WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-TorontoBikeShare WatchKit Extension/Pods-TorontoBikeShare WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		CC2D51BC2509F48BFB388CAB /* Pods_TorontoBikeShare_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TorontoBikeShare_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +177,8 @@
 				AD4BC4D424D914F600509A0F /* BikeAnnotation.swift */,
 				AD5E78B524D8BEF100DF9EBF /* DataFetcher.swift */,
 				AD5E78B324D8BDFF00DF9EBF /* BikeStation.swift */,
+				AD7A04C924DA3A0A005C0C2D /* SessionDelegate.swift */,
+				ADB89CA724DCC83A005D0EFC /* FavoritePersistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -488,6 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB89CA824DCC83A005D0EFC /* FavoritePersistence.swift in Sources */,
+				AD7A04CA24DA3A0A005C0C2D /* SessionDelegate.swift in Sources */,
 				AD5E78B624D8BEF100DF9EBF /* DataFetcher.swift in Sources */,
 				AD4BC4D524D914F600509A0F /* BikeAnnotation.swift in Sources */,
 				AD5E787C24D8BB4000DF9EBF /* ViewController.swift in Sources */,
@@ -502,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB89CA924DCC8A7005D0EFC /* FavoritePersistence.swift in Sources */,
 				AD5E78A124D8BB4200DF9EBF /* NotificationController.swift in Sources */,
 				AD5E789F24D8BB4200DF9EBF /* ExtensionDelegate.swift in Sources */,
 				AD4BC4D124D8E45800509A0F /* BikeStation.swift in Sources */,
@@ -509,6 +520,7 @@
 				AD5E789D24D8BB4200DF9EBF /* InterfaceController.swift in Sources */,
 				AD4BC4D024D8E3AB00509A0F /* DataFetcher.swift in Sources */,
 				AD4BC4DE24D92B1300509A0F /* FavoritesRowController.swift in Sources */,
+				AD7A04CB24DA5622005C0C2D /* SessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

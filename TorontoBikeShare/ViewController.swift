@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import WatchConnectivity
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         print(self.documentsDirectory())
         self.centerMapOnStation()
         getBikeLocations()
+        print(WCSession.default.outstandingFileTransfers)
         
     }
     
@@ -72,46 +74,32 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
-    /// Encodes self.favoriteLocations to the favorite plist file on the iPhone
-    fileprivate func encodeToPlist() {
-        // This saves to a plist file in the documents directory of the iphone
-        let encoder = PropertyListEncoder()
-        do {
-            let arr = self.processFavoriteLocations()
-            let data = try encoder.encode(arr)
-            try data.write(to: self.dataFilePath(), options: .atomic)
-        } catch {
-            print("Error encoding or writing: \(error.localizedDescription)")
-        }
-    }
-    
     /// Handles what happens when the annotation button is clicked
     
     @objc func buttonClicked(sender: FavoriteButton) {
         print("button clicked")
         let annotation = sender.annotation as! BikeAnnotation
+        let persistence = FavoritePersistence()
         if annotation.isFavorite {
             sender.setImage(UIImage(systemName: "star"), for: .normal)
             annotation.isFavorite = false
             let id = annotation.station!.stationID
             self.favoriteLocations.removeValue(forKey: id)
-            self.encodeToPlist()
+            persistence.saveToPlist(locations: self.favoriteLocations)
+            
+            // Now send the change to the apple watch
+            persistence.sendDataToWatch(bikeStation: annotation.station!, add: false)
+            
         } else {
             sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
             annotation.isFavorite = true
             let station = annotation.station!
             self.favoriteLocations[station.stationID] = station
+            persistence.saveToPlist(locations: self.favoriteLocations)
             
-            encodeToPlist()
+            // Now add this location to the apple watch
+            persistence.sendDataToWatch(bikeStation: annotation.station!, add: true)
         }
-    }
-    
-    func processFavoriteLocations() -> [BikeStation] {
-        var stations: [BikeStation] = []
-        for key in self.favoriteLocations.keys {
-            stations.append(self.favoriteLocations[key]!)
-        }
-        return stations
     }
     
     private func centerMapOnStation() {

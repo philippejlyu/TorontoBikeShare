@@ -12,11 +12,10 @@ class FavoritesRowController: NSObject {
 
     @IBOutlet var stationNameLabel: WKInterfaceLabel!
     
-    var stationInformation: NSDictionary = [:]
+    var stationInformation: BikeStation?
     
-    func initializeInformation(information: NSDictionary) {
+    func initializeInformation(information: BikeStation) {
         self.stationInformation = information
-        let name = self.stationInformation["station name"] as! String
-        self.stationNameLabel.setText(name)
+        self.stationNameLabel.setText(information.name)
     }
 }

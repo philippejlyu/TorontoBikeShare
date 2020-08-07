@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    lazy var sessionDelegate = SessionDelegate()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = sessionDelegate
+            session.activate()
+        } else {
+            print("WCSession not supported")
+        }
+        
         return true
     }
 
