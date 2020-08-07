@@ -13,6 +13,7 @@ import Foundation
 class FavoritesInterfaceController: WKInterfaceController {
 
     @IBOutlet weak var favoritesTable: WKInterfaceTable!
+    @IBOutlet weak var addOniPhoneLabel: WKInterfaceLabel!
     
     var favorites: [BikeStation] = []
     
@@ -25,7 +26,8 @@ class FavoritesInterfaceController: WKInterfaceController {
         let favDict = persistence.retrieveFavorites()
         self.favorites = persistence.processFavoriteLocations(favoriteLocations: favDict)
         print(favorites)
-        
+        let debugStation = BikeStation(name: "Spadina Ave / Willcocks St", stationID: "7170", lat: 43.661672, lon: -79.401387, availableBikes: 1, availableEbike: 0, availableDock: 14)
+        self.favorites.append(debugStation)
         setupTable()
         
     }
@@ -48,6 +50,11 @@ class FavoritesInterfaceController: WKInterfaceController {
     // MARK: - Table related
     
     func setupTable() {
+        if self.favorites.count > 0 {
+            self.addOniPhoneLabel.setHidden(true)
+        } else {
+            self.addOniPhoneLabel.setHidden(false)
+        }
         self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
         for index in 0..<self.favoritesTable.numberOfRows {
             guard let controller = favoritesTable.rowController(at: index) as? FavoritesRowController else { continue }

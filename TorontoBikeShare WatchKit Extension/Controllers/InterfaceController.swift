@@ -12,11 +12,7 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     
     // MARK: - Properties
-    var stationID = ""
-    var stationName = ""
-    var availableBikes = 0
-    var availableDocks = 0
-    var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    var station: BikeStation! = nil
 
     // MARK: - Outlets
     @IBOutlet weak var stationNameLabel: WKInterfaceLabel!
@@ -29,52 +25,49 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        if let station = context as? NSDictionary {
-            self.stationID = station["station id"] as! String
-            self.stationName = station["station name"] as! String
-            let lat = station["lat"] as! Double
-            let lon = station["lon"] as! Double
-            self.coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-            print("Got the info populated")
+        setupInfo(context)
+        fetchData()
+    }
+    
+    // MARK: - View setup
+    /// Adds the station name, marker on the map, and centers the map
+    fileprivate func setupInfo(_ context: Any?) {
+        if let station = context as? BikeStation {
+            self.station = station
+            let coordinates = CLLocationCoordinate2D(latitude: station.lat, longitude: station.lon)
+            self.centerMapOnCoordinates(coordinates)
+            self.addMarkerToMap(coordinates)
+            self.stationNameLabel.setText(self.station.name)
         }
-        
+    }
+    
+    fileprivate func fetchData() {
         let fetcher = DataFetcher()
         fetcher.populateBikes { (bikes, error) in
             if error == nil {
-                if let stationInfo = bikes?[self.stationID] {
+                if let stationInfo = bikes?[self.station.stationID] {
+                    print(stationInfo)
                     let mechBikes = stationInfo.0
                     let ebikes = stationInfo.1
                     let docks = stationInfo.2
                     let totalBikes = mechBikes + ebikes
                     
                     DispatchQueue.main.async {
-                        self.stationNameLabel.setText(self.stationName)
                         self.availableBikesLabel.setText("\(totalBikes)")
                         self.availableDocksLabel.setText("\(docks)")
-                        self.map.addAnnotation(self.coordinates, with: .red)
-                        self.centerMapOnStation()
                     }
                 }
             }
         }
-        
-        // Configure interface objects here.
     }
     
     // MARK: - Map related functions
-    private func centerMapOnStation() {
+    private func centerMapOnCoordinates(_ coordinates: CLLocationCoordinate2D) {
         let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
-        self.map.setRegion(MKCoordinateRegion(center: self.coordinates, span: span))
+        self.map.setRegion(MKCoordinateRegion(center: coordinates, span: span))
     }
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    private func addMarkerToMap(_ coordinates: CLLocationCoordinate2D) {
+        self.map.addAnnotation(coordinates, with: .purple)
     }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }

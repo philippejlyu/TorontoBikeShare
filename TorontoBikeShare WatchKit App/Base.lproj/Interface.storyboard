@@ -17,8 +17,8 @@
                                 <label alignment="center" text="Station name" id="ltT-f6-3mz"/>
                                 <group width="1" alignment="left" id="Gb3-Jc-VU6">
                                     <items>
-                                        <label alignment="left" text="12" id="Dlq-Q8-rdH"/>
-                                        <label alignment="right" text="10" id="aLG-Qe-Fjb"/>
+                                        <label alignment="left" text="0" id="Dlq-Q8-rdH"/>
+                                        <label alignment="right" text="0" id="aLG-Qe-Fjb"/>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" id="Cue-53-SQF">
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="405" y="-343"/>
         </scene>
-        <!--Favorites Interface Controller-->
+        <!--Favorites-->
         <scene sceneID="8UB-an-gf6">
             <objects>
-                <controller id="AgB-5I-t4C" customClass="FavoritesInterfaceController" customModule="TorontoBikeShare_WatchKit_Extension">
+                <controller title="Favorites" id="AgB-5I-t4C" customClass="FavoritesInterfaceController" customModule="TorontoBikeShare_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="3jh-7U-aVb">
                             <items>
@@ -60,8 +60,10 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="center" verticalAlignment="center" text="Add Favorite Stations on iPhone" textAlignment="center" numberOfLines="2" id="Dir-Ua-JGC"/>
                     </items>
                     <connections>
+                        <outlet property="addOniPhoneLabel" destination="Dir-Ua-JGC" id="NO4-bB-Yii"/>
                         <outlet property="favoritesTable" destination="3jh-7U-aVb" id="qIY-Bu-VFb"/>
                     </connections>
                 </controller>
