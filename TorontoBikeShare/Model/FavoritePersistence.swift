@@ -71,6 +71,23 @@ class FavoritePersistence {
         WCSession.default.transferUserInfo(data)
     }
     
+    /// Saves `locations` to the plist, takes `changedStation` to tell the watch which piece of data actually changed, then sends it all to the watch
+    func sendPlistFileToWatch(locations: [String: BikeStation], changedStation: BikeStation?, add: Bool) {
+        
+        // First we save it to the plist
+        self.saveAllToPlist(locations: locations)
+        
+        if let changedStation = changedStation {
+            let data: [String: Any] = ["name": changedStation.name, "stationID": changedStation.stationID, "lat": changedStation.lat, "lon": changedStation.lon, "availableBike": changedStation.availableBikes, "availableEbike": changedStation.availableEbike, "availableDocks": changedStation.availableDock, "add": add]
+            
+            WCSession.default.transferFile(self.dataFilePath(), metadata: data)
+        } else {
+            // Just sending the file
+            WCSession.default.transferFile(self.dataFilePath(), metadata: nil)
+        }
+        
+    }
+    
     /// Takes a dictionary and returns a BikeStation from the data it is given
     func dictToBikeStation(dict: [String: Any]) -> BikeStation? {
         guard let name = dict["name"] as? String else { return nil }

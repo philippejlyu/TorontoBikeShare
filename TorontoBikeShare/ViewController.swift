@@ -25,7 +25,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let persistence = FavoritePersistence()
         self.favoriteLocations = self.retrieveFavorites()
+        // Do this just in case it has never sent the data until now
+        if !UserDefaults.standard.bool(forKey: "hasSentData") {
+            persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: nil, add: false)
+            UserDefaults.standard.setValue(true, forKey: "hasSentData")
+        }
         print(self.favoriteLocations)
         self.registerMapAnnotationViews()
         print(self.documentsDirectory())
@@ -85,20 +91,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.isFavorite = false
             let id = annotation.station!.stationID
             self.favoriteLocations.removeValue(forKey: id)
-            persistence.saveAllToPlist(locations: self.favoriteLocations)
+//            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now send the change to the apple watch
-            persistence.sendDataToWatch(bikeStation: annotation.station!, add: false)
+//            persistence.sendDataToWatch(bikeStation: annotation.station!, add: false)
+            persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: annotation.station!, add: false)
             
         } else {
             sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
             annotation.isFavorite = true
             let station = annotation.station!
             self.favoriteLocations[station.stationID] = station
-            persistence.saveAllToPlist(locations: self.favoriteLocations)
+//            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now add this location to the apple watch
-            persistence.sendDataToWatch(bikeStation: annotation.station!, add: true)
+//            persistence.sendDataToWatch(bikeStation: annotation.station!, add: true)
+            
+            persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: annotation.station!, add: true)
         }
     }
     

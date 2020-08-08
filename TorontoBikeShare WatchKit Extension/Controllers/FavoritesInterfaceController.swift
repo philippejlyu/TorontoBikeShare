@@ -71,13 +71,13 @@ class FavoritesInterfaceController: WKInterfaceController {
     
     // MARK: - Data related
     func registerForDataNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(addFavorite(notification:)), name: Notification.Name("stationAdded"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(removeFavorite(notification:)), name: Notification.Name("stationRemoved"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(addFavorite(notification:)), name: Notification.Name("com.philippeyu.bike.stationAdded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(removeFavorite(notification:)), name: Notification.Name("com.philippeyu.bike.stationRemoved"), object: nil)
     }
     
     func deregisterForDataNotifications() {
-        NotificationCenter.default.removeObserver(self, name: Notification.Name("stationAdded"), object: nil)
-        NotificationCenter.default.removeObserver(self, name: Notification.Name("stationRemoved"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("com.philippeyu.bike.stationAdded"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("com.philippeyu.bike.stationRemoved"), object: nil)
         
     }
     
