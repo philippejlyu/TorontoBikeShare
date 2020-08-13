@@ -26,7 +26,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let persistence = FavoritePersistence()
-        self.favoriteLocations = self.retrieveFavorites()
+        self.favoriteLocations = persistence.retrieveFavorites()
         // Do this just in case it has never sent the data until now
         if !UserDefaults.standard.bool(forKey: "hasSentData") {
             persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: nil, add: false)
@@ -34,16 +34,19 @@ class ViewController: UIViewController, MKMapViewDelegate {
         }
         print(self.favoriteLocations)
         self.registerMapAnnotationViews()
-        print(self.documentsDirectory())
         self.centerMapOnStation()
-        getBikeLocations()
-        print(WCSession.default.outstandingFileTransfers)
+        addMapAnnotations()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.mapView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.showCompanionAppError()
     }
     
     // MARK: - MKMapViewDelegate
@@ -80,8 +83,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
-    /// Handles what happens when the annotation button is clicked
-    
+    /// Handles what happens when the favorite button is clicked in the annotation
     @objc func buttonClicked(sender: FavoriteButton) {
         print("button clicked")
         let annotation = sender.annotation as! BikeAnnotation
@@ -94,7 +96,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now send the change to the apple watch
-//            persistence.sendDataToWatch(bikeStation: annotation.station!, add: false)
             persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: annotation.station!, add: false)
             
         } else {
@@ -102,11 +103,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotation.isFavorite = true
             let station = annotation.station!
             self.favoriteLocations[station.stationID] = station
-//            persistence.saveAllToPlist(locations: self.favoriteLocations)
             
             // Now add this location to the apple watch
-//            persistence.sendDataToWatch(bikeStation: annotation.station!, add: true)
-            
             persistence.sendPlistFileToWatch(locations: self.favoriteLocations, changedStation: annotation.station!, add: true)
         }
     }
@@ -117,43 +115,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.mapView.setRegion(MKCoordinateRegion(center: center, span: span), animated: false)
     }
     
-    
-    
+    /// Register the required annotation views for map annotations
     private func registerMapAnnotationViews() {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "AnnotationView")
     }
     
-    func documentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
-    func dataFilePath() -> URL {
-        return documentsDirectory().appendingPathComponent("Favourites.plist")
-    }
-    
-    // TODO: Add read from plist to recover saved places
-    
-    /// Retreives the favorites from the plist file on the iPhone
-    func retrieveFavorites() -> [String: BikeStation] {
-        var favourites: [String: BikeStation] = [:]
-        guard let plistData = self.readFromPlist() else { return favourites }
-        for location in plistData {
-            let station = BikeStation(name: location["name"] as! String, stationID: location["stationID"] as! String, lat: location["lat"] as! Double, lon: location["lon"] as! Double, availableBikes: location["availableBikes"] as! Int, availableEbike: location["availableEbike"] as! Int, availableDock: location["availableDock"] as! Int, distance: 0)
-            favourites[location["stationID"] as! String] = station
-        }
-        return favourites
-    }
-    
-    func readFromPlist() -> [NSDictionary]? {
-        if let favorites = NSArray(contentsOf: self.dataFilePath()) as? [NSDictionary] {
-            return favorites
-        }
-        return nil
-    }
-    
     /// Gets the bike locations from the city's server
-    fileprivate func getBikeLocations() {
+    fileprivate func addMapAnnotations() {
         let fetcher = DataFetcher()
         fetcher.getLocations { (locations, error) in
             if let locations = locations {
@@ -179,6 +147,21 @@ class ViewController: UIViewController, MKMapViewDelegate {
             } else {
                 print(error)
             }
+        }
+    }
+    
+    // MARK: - Watch related
+    
+    /// Shows an error if the watch app is not installed
+    func showCompanionAppError() {
+        let session = WCSession.default
+        print(session.isWatchAppInstalled)
+        if !session.isWatchAppInstalled {
+            print("Watch app is not installed")
+            let alert = UIAlertController(title: "Watch app not installed", message: "The watch app should be installed for BikeShare to work properly", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
