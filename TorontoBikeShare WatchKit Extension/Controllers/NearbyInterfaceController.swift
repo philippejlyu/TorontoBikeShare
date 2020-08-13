@@ -71,9 +71,9 @@ class NearbyInterfaceController: WKInterfaceController, SortedLocationsDelegate 
     
     // MARK: - SortedLocationDelegate
     func didFinishSorting(locations: [BikeStation]) {
-        print("Did finish sorting locations")
         self.stations = locations
-        self.favoritesTable.setNumberOfRows(locations.count, withRowType: "favoriteRow")
+        // For memory reasons, we're just going to show the 10 closest locations, because otherwise, theres lots of ram usage and cpu usage goes to 100%
+        self.favoritesTable.setNumberOfRows(10, withRowType: "favoriteRow")
         self.setupTable()
     }
 }
