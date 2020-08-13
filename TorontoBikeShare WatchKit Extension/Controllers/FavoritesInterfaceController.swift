@@ -27,8 +27,8 @@ class FavoritesInterfaceController: WKInterfaceController {
         self.favorites = persistence.processFavoriteLocations(favoriteLocations: favDict)
         
         // Debug purposes only
-//        let debugStation = BikeStation(name: "Spadina Ave / Willcocks St", stationID: "7170", lat: 43.661672, lon: -79.401387, availableBikes: 1, availableEbike: 0, availableDock: 14)
-//        self.favorites.append(debugStation)
+        let debugStation = BikeStation(name: "Spadina Ave / Willcocks St", stationID: "7170", lat: 43.661672, lon: -79.401387, availableBikes: 1, availableEbike: 0, availableDock: 14, distance: 0)
+        self.favorites.append(debugStation)
         setupTable()
         
     }
@@ -56,15 +56,23 @@ class FavoritesInterfaceController: WKInterfaceController {
         } else {
             self.addOniPhoneLabel.setHidden(false)
         }
-        self.favoritesTable.setNumberOfRows(self.favorites.count, withRowType: "favoriteRow")
-        for index in 0..<self.favoritesTable.numberOfRows {
+        
+        // We do this instead of setRowCount because apparently that doesn't work
+        // We also want to ensure that the first row is always a row that says nearby
+        var rowTypes = ["nearbyRow"]
+        for i in 0..<self.favorites.count {
+            rowTypes.append("favoriteRow")
+        }
+        self.favoritesTable.setRowTypes(rowTypes)
+        for index in 1..<self.favoritesTable.numberOfRows {
             guard let controller = favoritesTable.rowController(at: index) as? FavoritesRowController else { continue }
-            controller.initializeInformation(information: self.favorites[index])
+            controller.initializeInformation(information: self.favorites[index - 1])
         }
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        let station = self.favorites[rowIndex]
+        // We do -1 because of the nearby button thats there
+        let station = self.favorites[rowIndex - 1]
         pushController(withName: "StationInferface", context: station)
 
     }

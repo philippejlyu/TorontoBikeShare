@@ -19,6 +19,29 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>TorontoBikeShareTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AD5E787324D8BB4000DF9EBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD5E788724D8BB4100DF9EBF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADA0685624E3ABE600F9A95E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

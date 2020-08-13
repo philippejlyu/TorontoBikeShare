@@ -139,7 +139,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var favourites: [String: BikeStation] = [:]
         guard let plistData = self.readFromPlist() else { return favourites }
         for location in plistData {
-            let station = BikeStation(name: location["name"] as! String, stationID: location["stationID"] as! String, lat: location["lat"] as! Double, lon: location["lon"] as! Double, availableBikes: location["availableBikes"] as! Int, availableEbike: location["availableEbike"] as! Int, availableDock: location["availableDock"] as! Int)
+            let station = BikeStation(name: location["name"] as! String, stationID: location["stationID"] as! String, lat: location["lat"] as! Double, lon: location["lon"] as! Double, availableBikes: location["availableBikes"] as! Int, availableEbike: location["availableEbike"] as! Int, availableDock: location["availableDock"] as! Int, distance: 0)
             favourites[location["stationID"] as! String] = station
         }
         return favourites

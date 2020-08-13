@@ -39,7 +39,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="405" y="-343"/>
+            <point key="canvasLocation" x="395" y="-592"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="8UB-an-gf6">
@@ -58,6 +58,17 @@
                                         <outlet property="stationNameLabel" destination="An3-wA-08J" id="Oa6-GU-jrn"/>
                                     </connections>
                                 </tableRow>
+                                <tableRow identifier="nearbyRow" id="FRn-FI-x6G">
+                                    <group key="rootItem" width="1" height="46" alignment="left" spacing="4" id="MB9-pB-0iJ">
+                                        <items>
+                                            <imageView alignment="left" verticalAlignment="center" image="location" catalog="system" id="lHA-pS-b0i"/>
+                                            <label alignment="left" verticalAlignment="center" text="Nearby" id="wPx-oD-BNb"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="q5d-9I-rb4" kind="push" id="MPO-8P-Jry"/>
+                                        </connections>
+                                    </group>
+                                </tableRow>
                             </items>
                         </table>
                         <label alignment="center" verticalAlignment="center" text="Add Favorite Stations on iPhone" textAlignment="center" numberOfLines="2" id="Dir-Ua-JGC"/>
@@ -68,7 +79,34 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="143.55555555555554" y="-343.88324873096445"/>
+            <point key="canvasLocation" x="142.71604938271605" y="-358.55329949238575"/>
+        </scene>
+        <!--Nearby-->
+        <scene sceneID="5Rj-Gz-1P3">
+            <objects>
+                <controller title="Nearby" id="q5d-9I-rb4" customClass="NearbyInterfaceController" customModule="TorontoBikeShare_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="YaF-9l-Tv6">
+                            <items>
+                                <tableRow identifier="favoriteRow" id="lMk-rf-Ba1" customClass="FavoritesRowController" customModule="TorontoBikeShare_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="80" alignment="left" id="OI2-w9-ZFi">
+                                        <items>
+                                            <label width="136" height="44" alignment="left" verticalAlignment="center" text="Wellesley St W / Queen's Park Cres" numberOfLines="3" id="ApZ-A2-unR"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="stationNameLabel" destination="ApZ-A2-unR" id="fHi-L0-HiI"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="favoritesTable" destination="YaF-9l-Tv6" id="q1G-Z4-E6e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="395" y="-281"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -106,4 +144,7 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

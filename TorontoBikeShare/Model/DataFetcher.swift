@@ -41,7 +41,7 @@ class DataFetcher {
                                 let mech = bikeAvailability!.0
                                 let ebike = bikeAvailability!.1
                                 let empty = bikeAvailability!.2
-                                savedStations[id] = BikeStation(name: name, stationID: id, lat: lat, lon: lon, availableBikes: mech, availableEbike: ebike, availableDock: empty)
+                                savedStations[id] = BikeStation(name: name, stationID: id, lat: lat, lon: lon, availableBikes: mech, availableEbike: ebike, availableDock: empty, distance: 0)
                                 
                             }
                             completionHandler(savedStations, nil)

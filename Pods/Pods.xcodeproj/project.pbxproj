@@ -20,8 +20,9 @@
 		224A3831D5F30306D63490D3AAC5EB72 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1BCA84A9CCB1AA25AFC799714E1E4 /* AFError.swift */; };
 		227E12B0725AEB031D6CAF2F6245B3CB /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3324B74481243F45EE1B78815003A1F /* ServerTrustEvaluation.swift */; };
 		2286144F235F66AC2ED13065E9F7C38D /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F6930328493B35C5996CAA496B1A6 /* Combine.swift */; };
-		29AC9C49B7355B713A02AE92FE662D4E /* Pods-TorontoBikeShare WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DE1C3A60854A4A4A8DB30C3173D49A /* Pods-TorontoBikeShare WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29AC9C49B7355B713A02AE92FE662D4E /* Pods-TorontoBikeShare WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA46312813BE11B79F328CCE5215E3D /* Pods-TorontoBikeShare WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3000BC56A245FD0E0A6093569107ACAE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BC755C005CB005A3389EAC799E5AB /* Alamofire.swift */; };
+		31C3D67BD2FE28D6031F235D188F5B08 /* Pods-TorontoBikeShareTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD35FD0F39E46866783BD88DE8280FC /* Pods-TorontoBikeShareTests-dummy.m */; };
 		35ADBF0C65134E9BFE1D4E96116AA804 /* Alamofire-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7EBE2BA5FACEBDFA726A70B738D1C71 /* Alamofire-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F72916FB0B2350DC6C1C9C6DBFF799 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF4BFD4F55AACC3BD988B1904DA27E8 /* CFNetwork.framework */; };
 		398AA130556567DCA72B4354545F0C9B /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACCB839416FED97140646B5E4ECF848 /* URLConvertible+URLRequestConvertible.swift */; };
@@ -40,10 +41,11 @@
 		684DCC859A74B67D6DFE235251F023E0 /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E75366713780B39232540F4AE14A4 /* URLRequest+Alamofire.swift */; };
 		6A9CD63B91A5E0E6E8B92D5651877667 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A00DCA5D1E990BBB7E60625FC0D1953 /* Notifications.swift */; };
 		6AB9CDFE231B8BBE2F7DFAEBDA541A3D /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE44727258B2483FC75AFF053638DC /* URLEncodedFormEncoder.swift */; };
-		6B4838CA9FB8210936E737325BA692F4 /* Pods-TorontoBikeShare WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCCF26837161C6BFADD25B94BC56F52 /* Pods-TorontoBikeShare WatchKit App-dummy.m */; };
+		6B4838CA9FB8210936E737325BA692F4 /* Pods-TorontoBikeShare WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BDFB0957EEF21C1F1582387F01DB /* Pods-TorontoBikeShare WatchKit App-dummy.m */; };
 		6B825AB3F4B2EDF9AF19766017C6CFB6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4F210F797EA8B4ADD14B531B0D14B /* Request.swift */; };
 		732B2AA38C6A373847FCC12470CA35AD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0163862695D03CE42129A3375651890 /* Response.swift */; };
 		75B7B3E189EFF69DDE3EF8C05FE3FB12 /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14358BF94EDCDAE487C62E2BDF0CD94 /* AuthenticationInterceptor.swift */; };
+		7CEEF03F1F890EF4AE76DD361A3608EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF87B89D31C12BA0D2F5BC069002ECFC /* Foundation.framework */; };
 		810E58544571CC4962153B84838E345F /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9B3D47405A0F0CD75A43567CDE86E7 /* RequestInterceptor.swift */; };
 		8168D0B5C11E20A5E639FC7AE63CB42A /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33C8551E8670F3194700A68BB6BABA1 /* HTTPHeaders.swift */; };
 		81FC7B98BC0CDEAF0A781496744C8AF0 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F5D733E203A81A4FABF300B002E1A /* MultipartFormData.swift */; };
@@ -53,7 +55,7 @@
 		8F8122B5355EBB483748741BC9C8948C /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB188F5529ABC8B1BFC27717D4176C8 /* MultipartUpload.swift */; };
 		93860A6C290F24CCF2ECCF51ED82F947 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007F39F95FB476EBD7F75FCD9C92BB3 /* Protected.swift */; };
 		9599E1D0AC10FAFED7166F1B764D98B9 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD11C6BDAD70991BA1A60E87CD3207C /* ParameterEncoder.swift */; };
-		9789EC4A13B6FBC36D6091A98F062A17 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEB2C91DF632120A0E6BF1A742DCBF5 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9789EC4A13B6FBC36D6091A98F062A17 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B67B7602500BA1AE408750FF9C2A4B73 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A12F0A305DD81ED9B25273630D1DD04 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289CC963FAE084523CBDECBE79A4E4 /* AlamofireExtended.swift */; };
 		9C922C38CE256A9380238167E8B3E9AE /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9DFCD6E35FDE26BD65CC757AAB4BBC /* OperationQueue+Alamofire.swift */; };
 		9D82321B9B344256515F204ADFD3EE24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF87B89D31C12BA0D2F5BC069002ECFC /* Foundation.framework */; };
@@ -72,15 +74,16 @@
 		B6D253C12A036647005A146817A0EBD8 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01212E99569904BC7E174B12457A6F0C /* EventMonitor.swift */; };
 		BC16C5107A9A754DB38763FB41A46DAF /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF48F7B69B2E769DC436C834AB963D /* NetworkReachabilityManager.swift */; };
 		BEB8C91DDE59124052CDCB3F2D824301 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8EC4C5EFDE2158A70B3DBE2F9A4467 /* HTTPMethod.swift */; };
-		BFE449704C3F764746DA6118ED7D60DD /* Pods-TorontoBikeShare-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B92289781B1132FF68184E1206E52677 /* Pods-TorontoBikeShare-dummy.m */; };
+		BFE449704C3F764746DA6118ED7D60DD /* Pods-TorontoBikeShare-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7829A7F6499445AE993C9D61A402FA5E /* Pods-TorontoBikeShare-dummy.m */; };
 		C27369A5662EB496BE4F3BDDCB21E71E /* Alamofire-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC20AAB9E66CF1ABCB57E3B2DF18EBB /* Alamofire-watchOS-dummy.m */; };
 		C33A2068C4278176A7ED847F8C8BA508 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BE44727258B2483FC75AFF053638DC /* URLEncodedFormEncoder.swift */; };
 		C4B1C9CCE109DBC53273C3A5CE492B87 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007F39F95FB476EBD7F75FCD9C92BB3 /* Protected.swift */; };
 		C50096A8822C2F9D174B295A968CFB1C /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F5D733E203A81A4FABF300B002E1A /* MultipartFormData.swift */; };
-		C5BA778517C953957DF075AE28C88E52 /* Pods-TorontoBikeShare-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D58D0C82972451B00E50EB98657B2CA /* Pods-TorontoBikeShare-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BA778517C953957DF075AE28C88E52 /* Pods-TorontoBikeShare-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AD36CD52774C25D47A040303735217C /* Pods-TorontoBikeShare-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C923B66CDF05EC1C323AA6F64F0E7DCE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1BCA84A9CCB1AA25AFC799714E1E4 /* AFError.swift */; };
 		C98DDF1CE4A4DEE86B9E0AC61ECFFEC9 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881A367187AD3A651858835BED60BDB /* RequestTaskMap.swift */; };
 		CF5605FFD341484A088D7FD6720CC732 /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE289CC963FAE084523CBDECBE79A4E4 /* AlamofireExtended.swift */; };
+		CF971DF7174691316637636E32F3D363 /* Pods-TorontoBikeShareTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6614C87E8C0DF63201D72C29D771FED3 /* Pods-TorontoBikeShareTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D58108AC022FDCE975EE2B3C1891AB12 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D48AEE5166B4B05FB6954944A23B61 /* RetryPolicy.swift */; };
 		DE4716AD8E03D2879DD4A0C66CCBCE5E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F89F9683F4A807784A8AD7B9A5521 /* DispatchQueue+Alamofire.swift */; };
 		DF160BB9EFA0CC8CC10CFEF171533D3E /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662E75366713780B39232540F4AE14A4 /* URLRequest+Alamofire.swift */; };
@@ -93,7 +96,7 @@
 		EFA869FB5F0371066AC86639473A5CD2 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FF48F7B69B2E769DC436C834AB963D /* NetworkReachabilityManager.swift */; };
 		F32331D203FD7C536F635E8673FE3EC8 /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD3C02A043D0BCC112CA5AB3E05E9E /* CachedResponseHandler.swift */; };
 		F7B54F15F889CAD34B26D94416DEB3F6 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD11C6BDAD70991BA1A60E87CD3207C /* ParameterEncoder.swift */; };
-		FB657E32C7261D0E77A269523601E35A /* Pods-TorontoBikeShare WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE106CA8B623302E20FF6594E704D52 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */; };
+		FB657E32C7261D0E77A269523601E35A /* Pods-TorontoBikeShare WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF121FCFD29BD5DE3F1860DCC6581974 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 66F51BC925FD5FB829E8D422C690BDF0;
 			remoteInfo = "Alamofire-watchOS";
+		};
+		40494AC0BA0D57FE6DA42F9588648EE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD8828BFC368157226E204A32CD5B6DE;
+			remoteInfo = "Alamofire-iOS";
 		};
 		D29C14192344461F0C243B7423CBA0E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -116,49 +126,54 @@
 /* Begin PBXFileReference section */
 		01212E99569904BC7E174B12457A6F0C /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
 		06ADFF4B4AC1A374E719660AF14A82AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		06C96105564FF7C7F6D221960DD13F0E /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		0881A367187AD3A651858835BED60BDB /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
 		0ACCB839416FED97140646B5E4ECF848 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		0B8EC4C5EFDE2158A70B3DBE2F9A4467 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
-		0BF63C921C0AA8680E58CE5D904FE318 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		0C5FC68C1E7176523974F8497C3F04CF /* Alamofire-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Alamofire-iOS.modulemap"; sourceTree = "<group>"; };
-		0FCCF26837161C6BFADD25B94BC56F52 /* Pods-TorontoBikeShare WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare WatchKit App-dummy.m"; sourceTree = "<group>"; };
-		11B338520497E7C51C935FB3CFFE0FFD /* Pods-TorontoBikeShare-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare-Info.plist"; sourceTree = "<group>"; };
 		1742DF431015274A2763DB4F79620A09 /* Alamofire-watchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Alamofire-watchOS-Info.plist"; path = "../Alamofire-watchOS/Alamofire-watchOS-Info.plist"; sourceTree = "<group>"; };
+		1CF767902976F8E836C798C699335B37 /* Pods-TorontoBikeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare.debug.xcconfig"; sourceTree = "<group>"; };
 		272FCEF32BDC0BE57E2C59D24CE57378 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		27FF383C81F06D67CCE182C26F829DEA /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		2BE1BCA84A9CCB1AA25AFC799714E1E4 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		2D8BC755C005CB005A3389EAC799E5AB /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		2EFC61D9D451D69D60E2B42FA44FB1AE /* Pods-TorontoBikeShare WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TorontoBikeShare WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
 		307417B10BFBA51B4B94A586462FD6FA /* Pods_TorontoBikeShare_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TorontoBikeShare_WatchKit_App.framework; path = "Pods-TorontoBikeShare WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E1ED22CD03DF0C261A5D82C0EA4EC8 /* Pods-TorontoBikeShareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShareTests.release.xcconfig"; sourceTree = "<group>"; };
 		3751235545FB66F1F8A6725F57A75B23 /* Pods_TorontoBikeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TorontoBikeShare.framework; path = "Pods-TorontoBikeShare.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3872C25145B327B330DFA9F26AD15D12 /* Pods-TorontoBikeShare WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TorontoBikeShare WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
 		39D48AEE5166B4B05FB6954944A23B61 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		3B9F89F9683F4A807784A8AD7B9A5521 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		3C9DFCD6E35FDE26BD65CC757AAB4BBC /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		3FC20AAB9E66CF1ABCB57E3B2DF18EBB /* Alamofire-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Alamofire-watchOS-dummy.m"; path = "../Alamofire-watchOS/Alamofire-watchOS-dummy.m"; sourceTree = "<group>"; };
 		43DA6DFAA898F949ACBD91D709EF13F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45172C1AA0ED619D0A8876F2B2BDC6D9 /* Pods_TorontoBikeShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TorontoBikeShareTests.framework; path = "Pods-TorontoBikeShareTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4571AB0F1C4E669F93EC836B4CF8F49B /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		4EDCCE6EE2C4E301A20F656F1752F829 /* Pods-TorontoBikeShare-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare-acknowledgements.plist"; sourceTree = "<group>"; };
 		4EE4B1D731C66D5A4FD6E6DCEA485FAA /* Alamofire-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		534CCDB5AFF27F45ED306ADD106DE763 /* Pods-TorontoBikeShare-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare-acknowledgements.plist"; sourceTree = "<group>"; };
-		57EC0F1C0BB2867509183E6470FB40BD /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		5C32733DC0E61B02DF5657FD0073760C /* Pods-TorontoBikeShare WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit App-Info.plist"; sourceTree = "<group>"; };
-		62B7DEF400D85A0003AB7C2A4E61D79E /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		50C6E17020BC621F8528D891C4E027F3 /* Pods-TorontoBikeShare.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare.modulemap"; sourceTree = "<group>"; };
+		59A5BDFB0957EEF21C1F1582387F01DB /* Pods-TorontoBikeShare WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		63A30A0AC39DF164E56A84FCFE97624B /* Pods-TorontoBikeShare-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare-Info.plist"; sourceTree = "<group>"; };
 		65FF48F7B69B2E769DC436C834AB963D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		6614C87E8C0DF63201D72C29D771FED3 /* Pods-TorontoBikeShareTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShareTests-umbrella.h"; sourceTree = "<group>"; };
 		662E75366713780B39232540F4AE14A4 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
+		670C3A4D8FF4DDC0914E8AF6E02E3946 /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6892BB8AFB89488ACE1CF154F124B917 /* Pods-TorontoBikeShareTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShareTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		695E9D61C34A3E68F012C56D74F1DE7A /* Pods-TorontoBikeShare WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit App-Info.plist"; sourceTree = "<group>"; };
 		69BE44727258B2483FC75AFF053638DC /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
-		6A87566DD506EE0A7A9AFBB05D6A2307 /* Pods-TorontoBikeShare WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
 		6AD11C6BDAD70991BA1A60E87CD3207C /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
 		6B3F6930328493B35C5996CAA496B1A6 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
+		738D011DD5A5131E09C17707550E2A73 /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		77C74AA4B5E6F6A37EFE86E064520B1A /* Pods-TorontoBikeShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7829A7F6499445AE993C9D61A402FA5E /* Pods-TorontoBikeShare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare-dummy.m"; sourceTree = "<group>"; };
 		7A00DCA5D1E990BBB7E60625FC0D1953 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		7BA1B078C419F10B852FE626DB0A8DB9 /* Pods-TorontoBikeShare-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TorontoBikeShare-frameworks.sh"; sourceTree = "<group>"; };
 		7DE5C6D76DF4A28D3FB2D4E348F6939F /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		7E84B3AC667272EB338EAB637800D99E /* Pods-TorontoBikeShare-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7F8518F9FF2B9349D1777AFEF5D2A518 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		846540793EC06DF1D8C42067F0BAD904 /* Alamofire-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-watchOS-prefix.pch"; path = "../Alamofire-watchOS/Alamofire-watchOS-prefix.pch"; sourceTree = "<group>"; };
-		84987EBB82BE8CADF1BAC7322CB47076 /* Pods-TorontoBikeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare.release.xcconfig"; sourceTree = "<group>"; };
 		850540BB2C52FE56F8FB7484E11A2F9B /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
-		8D58D0C82972451B00E50EB98657B2CA /* Pods-TorontoBikeShare-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare-umbrella.h"; sourceTree = "<group>"; };
+		87D4E1C38F5080211A214CA8ECECFA02 /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		8AD36CD52774C25D47A040303735217C /* Pods-TorontoBikeShare-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare-umbrella.h"; sourceTree = "<group>"; };
+		8AD5F048D9C2C58A81014BFC5831BEFA /* Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8DB188F5529ABC8B1BFC27717D4176C8 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
-		8DEB2C91DF632120A0E6BF1A742DCBF5 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
-		8EE106CA8B623302E20FF6594E704D52 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		9248A2669FF3FA23766B2B34B7138E61 /* Alamofire-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-iOS-Info.plist"; sourceTree = "<group>"; };
 		94D4F210F797EA8B4ADD14B531B0D14B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		966AA42878212207687E9A2A4DBCD618 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,38 +182,43 @@
 		9C9AE039FFBFD4D022BEE2EE8029E302 /* Alamofire-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9CF4BFD4F55AACC3BD988B1904DA27E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AAC7120F732B452D5233E9CA38481269 /* Pods-TorontoBikeShare-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TorontoBikeShare-frameworks.sh"; sourceTree = "<group>"; };
 		AE27DF211CC2C1F074D9EB706C307671 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		B007F39F95FB476EBD7F75FCD9C92BB3 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
-		B018DB671F2E493006810DEFD56C8519 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		B091A266D8FD75E7561DF9A79D440D35 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B1B2AF2E17D421D1947938AC18CCDE6E /* Pods-TorontoBikeShare.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare.modulemap"; sourceTree = "<group>"; };
-		B92289781B1132FF68184E1206E52677 /* Pods-TorontoBikeShare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare-dummy.m"; sourceTree = "<group>"; };
-		BE024FB0DBDC68C964EC1E853021E54B /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B67B7602500BA1AE408750FF9C2A4B73 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		B7C47A8BEB60F223F361BFE016DBA74F /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD35FD0F39E46866783BD88DE8280FC /* Pods-TorontoBikeShareTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShareTests-dummy.m"; sourceTree = "<group>"; };
 		C14358BF94EDCDAE487C62E2BDF0CD94 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
-		C4B751C23EC1D148100125433C3E74AC /* Pods-TorontoBikeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare.debug.xcconfig"; sourceTree = "<group>"; };
-		CB788661C6975F01BD477E7D0352AA3E /* Pods-TorontoBikeShare WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare WatchKit Extension.modulemap"; sourceTree = "<group>"; };
-		CCAFB80EE9A9351A828B6CEA6064597A /* Pods-TorontoBikeShare WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare WatchKit App.modulemap"; sourceTree = "<group>"; };
+		C8B6768DB3BE77970F8FEE05E3FDD636 /* Pods-TorontoBikeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare.release.xcconfig"; sourceTree = "<group>"; };
+		CDA46312813BE11B79F328CCE5215E3D /* Pods-TorontoBikeShare WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare WatchKit App-umbrella.h"; sourceTree = "<group>"; };
 		CE097F9DDFE2EF377CD5454BC3EA106A /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		CE289CC963FAE084523CBDECBE79A4E4 /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
 		D0163862695D03CE42129A3375651890 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		D3D101478A8D16A8D068203356C2F0F0 /* Pods-TorontoBikeShare WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare WatchKit App.modulemap"; sourceTree = "<group>"; };
 		D5A643B05D917BF4D3AD49D3199E013D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		D94F5D733E203A81A4FABF300B002E1A /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		D98939351252F8DF87A75C9C824130E6 /* Alamofire-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-watchOS-umbrella.h"; path = "../Alamofire-watchOS/Alamofire-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		DA52CBC3949CEC3243D930FFA4385094 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		DA7BB1A30700E7BF3B6AD5F1A67E83FE /* Pods-TorontoBikeShareTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShareTests.modulemap"; sourceTree = "<group>"; };
 		DF87B89D31C12BA0D2F5BC069002ECFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E31B5AC6A000172BE8609844BDEBA42D /* Alamofire-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-prefix.pch"; sourceTree = "<group>"; };
 		E3324B74481243F45EE1B78815003A1F /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		E33C8551E8670F3194700A68BB6BABA1 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		E487C44337156A20F331DC1FD1BC1B74 /* Pods-TorontoBikeShareTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShareTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E4B29B8F35DE0ACCA2DDA1B05E53A3FC /* Pods-TorontoBikeShareTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TorontoBikeShareTests-frameworks.sh"; sourceTree = "<group>"; };
 		E7EBE2BA5FACEBDFA726A70B738D1C71 /* Alamofire-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-iOS-umbrella.h"; sourceTree = "<group>"; };
+		EAD7857E51967E623CF3B4D55D9F14A9 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TorontoBikeShare WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		EBEAA80F6FC280A3BE911C7A70860751 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		ECD0B434B46E496CA843B0C21802633B /* Pods-TorontoBikeShare WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
 		EFA07F5B62B99896A8143B0265C7BCC0 /* Alamofire-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-watchOS.release.xcconfig"; path = "../Alamofire-watchOS/Alamofire-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		F24098D3D174D4DC70966FFC2E4FD930 /* Pods-TorontoBikeShare-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TorontoBikeShare-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F2DE1C3A60854A4A4A8DB30C3173D49A /* Pods-TorontoBikeShare WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TorontoBikeShare WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		F0BA1D48735DE6B452354C11F10D5148 /* Pods-TorontoBikeShareTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShareTests-Info.plist"; sourceTree = "<group>"; };
 		F2FD3C02A043D0BCC112CA5AB3E05E9E /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		F3C19F8E06B8F1838C78A169CF649BBD /* Pods-TorontoBikeShare WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TorontoBikeShare WatchKit Extension.modulemap"; sourceTree = "<group>"; };
 		F78DB3FB8C6F103A783CB618BED86A7E /* Alamofire-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-watchOS.modulemap"; path = "../Alamofire-watchOS/Alamofire-watchOS.modulemap"; sourceTree = "<group>"; };
 		F9FEB90246915CC0F2D276860695616F /* Alamofire-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-iOS-dummy.m"; sourceTree = "<group>"; };
 		FA830307ADBE185449C3E4DB090A2E2E /* Alamofire-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Alamofire-watchOS.debug.xcconfig"; path = "../Alamofire-watchOS/Alamofire-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FB9B3D47405A0F0CD75A43567CDE86E7 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
-		FD5CA423C7FA716E31DAB4977AEF1813 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TorontoBikeShare WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		FF121FCFD29BD5DE3F1860DCC6581974 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TorontoBikeShare WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +256,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		617CAB6CECF91D96E877E7C45EEEB546 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CEEF03F1F890EF4AE76DD361A3608EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF49E3FF03F06A4146888B44ACA5FC45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +275,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03A60DE641141F400348FAB551C8D0FC /* Pods-TorontoBikeShareTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BB1A30700E7BF3B6AD5F1A67E83FE /* Pods-TorontoBikeShareTests.modulemap */,
+				6892BB8AFB89488ACE1CF154F124B917 /* Pods-TorontoBikeShareTests-acknowledgements.markdown */,
+				E487C44337156A20F331DC1FD1BC1B74 /* Pods-TorontoBikeShareTests-acknowledgements.plist */,
+				BBD35FD0F39E46866783BD88DE8280FC /* Pods-TorontoBikeShareTests-dummy.m */,
+				E4B29B8F35DE0ACCA2DDA1B05E53A3FC /* Pods-TorontoBikeShareTests-frameworks.sh */,
+				F0BA1D48735DE6B452354C11F10D5148 /* Pods-TorontoBikeShareTests-Info.plist */,
+				6614C87E8C0DF63201D72C29D771FED3 /* Pods-TorontoBikeShareTests-umbrella.h */,
+				77C74AA4B5E6F6A37EFE86E064520B1A /* Pods-TorontoBikeShareTests.debug.xcconfig */,
+				34E1ED22CD03DF0C261A5D82C0EA4EC8 /* Pods-TorontoBikeShareTests.release.xcconfig */,
+			);
+			name = "Pods-TorontoBikeShareTests";
+			path = "Target Support Files/Pods-TorontoBikeShareTests";
+			sourceTree = "<group>";
+		};
 		45C36EB513B9DCC6545B6647B768A4F5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,18 +367,31 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		767A36FF3C8BA768B0563CF919834FD3 /* Pods-TorontoBikeShare WatchKit Extension */ = {
+		5B08316D2CC1AD376448BB7D4BD1F7BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB788661C6975F01BD477E7D0352AA3E /* Pods-TorontoBikeShare WatchKit Extension.modulemap */,
-				BE024FB0DBDC68C964EC1E853021E54B /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown */,
-				57EC0F1C0BB2867509183E6470FB40BD /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist */,
-				8EE106CA8B623302E20FF6594E704D52 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */,
-				2EFC61D9D451D69D60E2B42FA44FB1AE /* Pods-TorontoBikeShare WatchKit Extension-frameworks.sh */,
-				6A87566DD506EE0A7A9AFBB05D6A2307 /* Pods-TorontoBikeShare WatchKit Extension-Info.plist */,
-				8DEB2C91DF632120A0E6BF1A742DCBF5 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */,
-				62B7DEF400D85A0003AB7C2A4E61D79E /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */,
-				06C96105564FF7C7F6D221960DD13F0E /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */,
+				966AA42878212207687E9A2A4DBCD618 /* Alamofire.framework */,
+				43DA6DFAA898F949ACBD91D709EF13F8 /* Alamofire.framework */,
+				3751235545FB66F1F8A6725F57A75B23 /* Pods_TorontoBikeShare.framework */,
+				307417B10BFBA51B4B94A586462FD6FA /* Pods_TorontoBikeShare_WatchKit_App.framework */,
+				991B6AB3E8DA89A7F7429D005FC17BB6 /* Pods_TorontoBikeShare_WatchKit_Extension.framework */,
+				45172C1AA0ED619D0A8876F2B2BDC6D9 /* Pods_TorontoBikeShareTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		773FC30E2A007787966BF8FC5A44AE8D /* Pods-TorontoBikeShare WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3C19F8E06B8F1838C78A169CF649BBD /* Pods-TorontoBikeShare WatchKit Extension.modulemap */,
+				738D011DD5A5131E09C17707550E2A73 /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.markdown */,
+				87D4E1C38F5080211A214CA8ECECFA02 /* Pods-TorontoBikeShare WatchKit Extension-acknowledgements.plist */,
+				FF121FCFD29BD5DE3F1860DCC6581974 /* Pods-TorontoBikeShare WatchKit Extension-dummy.m */,
+				3872C25145B327B330DFA9F26AD15D12 /* Pods-TorontoBikeShare WatchKit Extension-frameworks.sh */,
+				ECD0B434B46E496CA843B0C21802633B /* Pods-TorontoBikeShare WatchKit Extension-Info.plist */,
+				B67B7602500BA1AE408750FF9C2A4B73 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h */,
+				B7C47A8BEB60F223F361BFE016DBA74F /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */,
+				670C3A4D8FF4DDC0914E8AF6E02E3946 /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */,
 			);
 			name = "Pods-TorontoBikeShare WatchKit Extension";
 			path = "Target Support Files/Pods-TorontoBikeShare WatchKit Extension";
@@ -348,37 +406,32 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A1627A62DE1284ED306A9BCF9009743B /* Pods-TorontoBikeShare */ = {
+		8325FFF78FC5331633FECC8DC2295A56 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B1B2AF2E17D421D1947938AC18CCDE6E /* Pods-TorontoBikeShare.modulemap */,
-				F24098D3D174D4DC70966FFC2E4FD930 /* Pods-TorontoBikeShare-acknowledgements.markdown */,
-				534CCDB5AFF27F45ED306ADD106DE763 /* Pods-TorontoBikeShare-acknowledgements.plist */,
-				B92289781B1132FF68184E1206E52677 /* Pods-TorontoBikeShare-dummy.m */,
-				7BA1B078C419F10B852FE626DB0A8DB9 /* Pods-TorontoBikeShare-frameworks.sh */,
-				11B338520497E7C51C935FB3CFFE0FFD /* Pods-TorontoBikeShare-Info.plist */,
-				8D58D0C82972451B00E50EB98657B2CA /* Pods-TorontoBikeShare-umbrella.h */,
-				C4B751C23EC1D148100125433C3E74AC /* Pods-TorontoBikeShare.debug.xcconfig */,
-				84987EBB82BE8CADF1BAC7322CB47076 /* Pods-TorontoBikeShare.release.xcconfig */,
+				B293C6E27BDCF7C9B77E03524DE851EA /* Pods-TorontoBikeShare */,
+				F6164D28762D9A6180285C1587207CFD /* Pods-TorontoBikeShare WatchKit App */,
+				773FC30E2A007787966BF8FC5A44AE8D /* Pods-TorontoBikeShare WatchKit Extension */,
+				03A60DE641141F400348FAB551C8D0FC /* Pods-TorontoBikeShareTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B293C6E27BDCF7C9B77E03524DE851EA /* Pods-TorontoBikeShare */ = {
+			isa = PBXGroup;
+			children = (
+				50C6E17020BC621F8528D891C4E027F3 /* Pods-TorontoBikeShare.modulemap */,
+				7E84B3AC667272EB338EAB637800D99E /* Pods-TorontoBikeShare-acknowledgements.markdown */,
+				4EDCCE6EE2C4E301A20F656F1752F829 /* Pods-TorontoBikeShare-acknowledgements.plist */,
+				7829A7F6499445AE993C9D61A402FA5E /* Pods-TorontoBikeShare-dummy.m */,
+				AAC7120F732B452D5233E9CA38481269 /* Pods-TorontoBikeShare-frameworks.sh */,
+				63A30A0AC39DF164E56A84FCFE97624B /* Pods-TorontoBikeShare-Info.plist */,
+				8AD36CD52774C25D47A040303735217C /* Pods-TorontoBikeShare-umbrella.h */,
+				1CF767902976F8E836C798C699335B37 /* Pods-TorontoBikeShare.debug.xcconfig */,
+				C8B6768DB3BE77970F8FEE05E3FDD636 /* Pods-TorontoBikeShare.release.xcconfig */,
 			);
 			name = "Pods-TorontoBikeShare";
 			path = "Target Support Files/Pods-TorontoBikeShare";
-			sourceTree = "<group>";
-		};
-		A9AD34D6E8D5B36CFA8E32EDC9E6DA9A /* Pods-TorontoBikeShare WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				CCAFB80EE9A9351A828B6CEA6064597A /* Pods-TorontoBikeShare WatchKit App.modulemap */,
-				B091A266D8FD75E7561DF9A79D440D35 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown */,
-				FD5CA423C7FA716E31DAB4977AEF1813 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.plist */,
-				0FCCF26837161C6BFADD25B94BC56F52 /* Pods-TorontoBikeShare WatchKit App-dummy.m */,
-				5C32733DC0E61B02DF5657FD0073760C /* Pods-TorontoBikeShare WatchKit App-Info.plist */,
-				F2DE1C3A60854A4A4A8DB30C3173D49A /* Pods-TorontoBikeShare WatchKit App-umbrella.h */,
-				0BF63C921C0AA8680E58CE5D904FE318 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */,
-				B018DB671F2E493006810DEFD56C8519 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */,
-			);
-			name = "Pods-TorontoBikeShare WatchKit App";
-			path = "Target Support Files/Pods-TorontoBikeShare WatchKit App";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -387,8 +440,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				DE987B428FA3D231AF1EF6088D8E9999 /* Frameworks */,
 				D6535AE6278B88B90F3A376D1347504F /* Pods */,
-				DF0C60DAEB9CB981DB6E20C0FC2C2853 /* Products */,
-				E3C95673C0974419674AD851AAC1F8B4 /* Targets Support Files */,
+				5B08316D2CC1AD376448BB7D4BD1F7BE /* Products */,
+				8325FFF78FC5331633FECC8DC2295A56 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -409,26 +462,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DF0C60DAEB9CB981DB6E20C0FC2C2853 /* Products */ = {
+		F6164D28762D9A6180285C1587207CFD /* Pods-TorontoBikeShare WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				966AA42878212207687E9A2A4DBCD618 /* Alamofire.framework */,
-				43DA6DFAA898F949ACBD91D709EF13F8 /* Alamofire.framework */,
-				3751235545FB66F1F8A6725F57A75B23 /* Pods_TorontoBikeShare.framework */,
-				307417B10BFBA51B4B94A586462FD6FA /* Pods_TorontoBikeShare_WatchKit_App.framework */,
-				991B6AB3E8DA89A7F7429D005FC17BB6 /* Pods_TorontoBikeShare_WatchKit_Extension.framework */,
+				D3D101478A8D16A8D068203356C2F0F0 /* Pods-TorontoBikeShare WatchKit App.modulemap */,
+				8AD5F048D9C2C58A81014BFC5831BEFA /* Pods-TorontoBikeShare WatchKit App-acknowledgements.markdown */,
+				EBEAA80F6FC280A3BE911C7A70860751 /* Pods-TorontoBikeShare WatchKit App-acknowledgements.plist */,
+				59A5BDFB0957EEF21C1F1582387F01DB /* Pods-TorontoBikeShare WatchKit App-dummy.m */,
+				695E9D61C34A3E68F012C56D74F1DE7A /* Pods-TorontoBikeShare WatchKit App-Info.plist */,
+				CDA46312813BE11B79F328CCE5215E3D /* Pods-TorontoBikeShare WatchKit App-umbrella.h */,
+				7F8518F9FF2B9349D1777AFEF5D2A518 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */,
+				EAD7857E51967E623CF3B4D55D9F14A9 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E3C95673C0974419674AD851AAC1F8B4 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A1627A62DE1284ED306A9BCF9009743B /* Pods-TorontoBikeShare */,
-				A9AD34D6E8D5B36CFA8E32EDC9E6DA9A /* Pods-TorontoBikeShare WatchKit App */,
-				767A36FF3C8BA768B0563CF919834FD3 /* Pods-TorontoBikeShare WatchKit Extension */,
-			);
-			name = "Targets Support Files";
+			name = "Pods-TorontoBikeShare WatchKit App";
+			path = "Target Support Files/Pods-TorontoBikeShare WatchKit App";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +510,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9789EC4A13B6FBC36D6091A98F062A17 /* Pods-TorontoBikeShare WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C009C16614914FE1CFF9924171CD7593 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF971DF7174691316637636E32F3D363 /* Pods-TorontoBikeShareTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +606,25 @@
 			productReference = 307417B10BFBA51B4B94A586462FD6FA /* Pods_TorontoBikeShare_WatchKit_App.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F01FA420A9A31DAAC2C0ABD7B697A122 /* Pods-TorontoBikeShareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 997159771F60FCDA0FBD2873F93BAA5D /* Build configuration list for PBXNativeTarget "Pods-TorontoBikeShareTests" */;
+			buildPhases = (
+				C009C16614914FE1CFF9924171CD7593 /* Headers */,
+				5DB010B9C120B63D8F832B25ED7032FB /* Sources */,
+				617CAB6CECF91D96E877E7C45EEEB546 /* Frameworks */,
+				15D2F0131498D16B9B01CACD906BB257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98B17D6DBEABB3628E5889C090E17B8B /* PBXTargetDependency */,
+			);
+			name = "Pods-TorontoBikeShareTests";
+			productName = "Pods-TorontoBikeShareTests";
+			productReference = 45172C1AA0ED619D0A8876F2B2BDC6D9 /* Pods_TorontoBikeShareTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		FD8828BFC368157226E204A32CD5B6DE /* Alamofire-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D831A468CE5C72D64968BE2EBB9C54F4 /* Build configuration list for PBXNativeTarget "Alamofire-iOS" */;
@@ -587,7 +661,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = DF0C60DAEB9CB981DB6E20C0FC2C2853 /* Products */;
+			productRefGroup = 5B08316D2CC1AD376448BB7D4BD1F7BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -596,11 +670,19 @@
 				0D47919CE2021CA9F27DC412F7A15C1A /* Pods-TorontoBikeShare */,
 				ADC69ABFAD8F37970F864A09E2CA96F6 /* Pods-TorontoBikeShare WatchKit App */,
 				37B9431CD53949EDC341D0493F63368C /* Pods-TorontoBikeShare WatchKit Extension */,
+				F01FA420A9A31DAAC2C0ABD7B697A122 /* Pods-TorontoBikeShareTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		15D2F0131498D16B9B01CACD906BB257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		39FC75FBCECC93D299F958BD58F1ACB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,6 +772,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DB010B9C120B63D8F832B25ED7032FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C3D67BD2FE28D6031F235D188F5B08 /* Pods-TorontoBikeShareTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66E3036B473190C43369BF9FF7DCBD6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -752,6 +842,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		98B17D6DBEABB3628E5889C090E17B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire-iOS";
+			target = FD8828BFC368157226E204A32CD5B6DE /* Alamofire-iOS */;
+			targetProxy = 40494AC0BA0D57FE6DA42F9588648EE2 /* PBXContainerItemProxy */;
+		};
 		A714CE1EBDC23C7781C674EA7D45DD94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire-iOS";
@@ -769,7 +865,7 @@
 /* Begin XCBuildConfiguration section */
 		039E8696A3474A2A2A585246F0EFFBA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62B7DEF400D85A0003AB7C2A4E61D79E /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */;
+			baseConfigurationReference = B7C47A8BEB60F223F361BFE016DBA74F /* Pods-TorontoBikeShare WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -977,7 +1073,7 @@
 		};
 		8177D93BA74E0F246F5E4FB85DC21792 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06C96105564FF7C7F6D221960DD13F0E /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */;
+			baseConfigurationReference = 670C3A4D8FF4DDC0914E8AF6E02E3946 /* Pods-TorontoBikeShare WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1013,6 +1109,83 @@
 				WATCHOS_DEPLOYMENT_TARGET = 6.2;
 			};
 			name = Release;
+		};
+		8B924B0072F214039ABA3F1BB7FD6310 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E1ED22CD03DF0C261A5D82C0EA4EC8 /* Pods-TorontoBikeShareTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TorontoBikeShareTests/Pods-TorontoBikeShareTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TorontoBikeShareTests/Pods-TorontoBikeShareTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		98F5320777FFCD3990062397D62D1B47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77C74AA4B5E6F6A37EFE86E064520B1A /* Pods-TorontoBikeShareTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TorontoBikeShareTests/Pods-TorontoBikeShareTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TorontoBikeShareTests/Pods-TorontoBikeShareTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		AC00D53036F81CE46605AF0D83A0E543 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1081,7 +1254,7 @@
 		};
 		D8250A3BACE6235BAF5F52BE961B913B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4B751C23EC1D148100125433C3E74AC /* Pods-TorontoBikeShare.debug.xcconfig */;
+			baseConfigurationReference = 1CF767902976F8E836C798C699335B37 /* Pods-TorontoBikeShare.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1156,7 +1329,7 @@
 		};
 		E78D02D1F4802B7991D4A2B2BEE18801 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84987EBB82BE8CADF1BAC7322CB47076 /* Pods-TorontoBikeShare.release.xcconfig */;
+			baseConfigurationReference = C8B6768DB3BE77970F8FEE05E3FDD636 /* Pods-TorontoBikeShare.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1195,7 +1368,7 @@
 		};
 		F35CAA91B6724F2ABF95365BBB546176 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B018DB671F2E493006810DEFD56C8519 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */;
+			baseConfigurationReference = EAD7857E51967E623CF3B4D55D9F14A9 /* Pods-TorontoBikeShare WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1234,7 +1407,7 @@
 		};
 		F775FD5D2C50A68E7D5F0DC4513A94F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BF63C921C0AA8680E58CE5D904FE318 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */;
+			baseConfigurationReference = 7F8518F9FF2B9349D1777AFEF5D2A518 /* Pods-TorontoBikeShare WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1305,6 +1478,15 @@
 			buildConfigurations = (
 				397493A3632213E763653FF74708F8C0 /* Debug */,
 				E600E9E99CE56184C962F63CB7EDEBE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		997159771F60FCDA0FBD2873F93BAA5D /* Build configuration list for PBXNativeTarget "Pods-TorontoBikeShareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98F5320777FFCD3990062397D62D1B47 /* Debug */,
+				8B924B0072F214039ABA3F1BB7FD6310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
