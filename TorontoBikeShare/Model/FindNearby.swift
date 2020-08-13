@@ -25,10 +25,10 @@ class FindNearby: NSObject, CLLocationManagerDelegate {
     
     // MARK: - Core location
     func requestCurrentLocation() {
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
             locationManager.startUpdatingLocation()
         }
@@ -47,6 +47,22 @@ class FindNearby: NSObject, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
     }
     
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.startUpdatingLocation()
+            break
+        case .authorizedAlways:
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.startUpdatingLocation()
+            break
+        default:
+            break
+        }
+    }
+    
+    // MARK: - Data processing
     func findNearestStation() -> BikeStation {
         var nearest = self.locations[0]
         let tempLoc = CLLocation(latitude: nearest.lat, longitude: nearest.lon)
